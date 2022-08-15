@@ -48,6 +48,4 @@ public class CartService {
         Cart cart = getCurrentCart(cartName);
         cart.decreaseProduct(productId);
         cacheManager.getCache("Cart").put(cartName, cart);
-    }
-
-}
+    }}
