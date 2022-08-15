@@ -38,7 +38,6 @@ public class CartService {
         cart.clear();
         cacheManager.getCache("Cart").put(cartName, cart);
     }
-
     public void removeItem(Long productId, String cartName) {
         Cart cart = getCurrentCart(cartName);
         cart.removeProduct(productId);
@@ -50,6 +49,5 @@ public class CartService {
         cart.decreaseProduct(productId);
         cacheManager.getCache("Cart").put(cartName, cart);
     }
-
 
 }
